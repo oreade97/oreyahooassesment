@@ -71,7 +71,7 @@ resource "google_kms_crypto_key" "crypto_key" {
 
 
 resource "google_storage_bucket" "bucket" {
-  depends_on = [ google_kms_crypto_key.crypto_key ]
+  depends_on = [ google_kms_crypto_key.crypto_key, google_project_iam_member.kms_crypto_key_permission ]
   name                        = var.bucket_name
   location                    = var.bucket_location
   uniform_bucket_level_access = true

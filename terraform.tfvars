@@ -1,28 +1,28 @@
-project_id               = "rt11056905"
+project_id               = "host-project-405420"
 gcpregion                = "us-east4"
 service_account_key_file = "tf.json"
 
 
 account_id      = "bucket-creator"
 display_name    = "Bucket Creator"
-bucket_name     = "test-env-ore-terraform"
+bucket_name     = "xxxx-bucket" #make this unique
 bucket_location = "us-east4"
-key_ring_name = "encrypt-bucket-ore6"  #make this unique
-crypto_key_name = "crypto-key-ore6"   #make this unique
+key_ring_name = "encrypt-bucket-xxxx"  #make this unique
+crypto_key_name = "crypto-key-xxxx"   #make this unique
 
 
 pubsubtopicname       = "your-topic-name"
 functionname          = "object-trigger"
-objfunctionbucketname = "ores-object-create-function-bucket-clean"    #make this unique
+objfunctionbucketname = "xxxx-object-create-function-bucket-clean"    #make this unique
 objfunctionobject     = "object-create.zip"
 schedulername         = "object-schedule"
 
 httpfunctionsaaccountid = "httpfunctionsa"
 httpfunctionname        = "http-function"
-httpfunctionbucketname  = "ores-http-create-function-object"     #make this unique
+httpfunctionbucketname  = "xxxx-http-create-function-object"     #make this unique
 httpfunctionobjectname  = "httpendpoint.zip"
 
-email = "donore97@gmail.com"    
+email = "enter email address here"    
 
 
 
