@@ -1,5 +1,6 @@
-Google Cloud Functions Deployment
+Yahoo Cloud Enablement Engineer Extercise 
 
+**Quick Description**
 These files deploy a set of resources on Google Cloud Platform to create, manage, and monitor cloud resources. The deployment includes the following components:
 1. Cloud Storage Bucket
 
@@ -25,7 +26,7 @@ These files deploy a set of resources on Google Cloud Platform to create, manage
 
 
 
-Dependencies
+**Dependencies**
 
 Before running the provided Terraform configuration, ensure that you have the following installed:
 
@@ -50,7 +51,7 @@ Before running the provided Terraform configuration, ensure that you have the fo
 After installing these dependencies, you should be able to run the Terraform commands to deploy the infrastructure. Make sure to replace placeholder values in the "terraform.tfvars" file with your actual values. Please make sure the bucket names are unique or the terraform deployment will fail.
 
 
-Deploying the Cloud resources
+**Deploying the Cloud resources**
 
 - Clone the Repository by running 
     git clone https://github.com/username/repository.git
@@ -65,7 +66,7 @@ Deploying the Cloud resources
 - Access Outputs (Optional) by running "terraform output"
 
 
-TearDown Instructions
+**TearDown Instructions**
 - Run "terraform destroy"
 
 
