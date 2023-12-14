@@ -81,5 +81,5 @@ After installing these dependencies, you should be able to run the Terraform com
 ```terraform destroy```
 
 
-
+The cloud scheduler runs every 10 minutes. It will take 10 minutes before the first object is created in the bucket.
 
