@@ -56,7 +56,7 @@ After installing these dependencies, you should be able to run the Terraform com
 
 - Clone the Repository by running 
 
-    ```git clone https://github.com/oreade97/repository.git```
+    ```git clone https://github.com/oreade97/oreyahooassesment.git```
 
 -Navigate to the Repository Directory:
 
