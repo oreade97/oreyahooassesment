@@ -1,4 +1,4 @@
-Yahoo Cloud Enablement Engineer Extercise 
+### Yahoo Cloud Enablement Engineer Exercise 
 
 **Quick Description**
 These files deploy a set of resources on Google Cloud Platform to create, manage, and monitor cloud resources. The deployment includes the following components:
