@@ -11,7 +11,7 @@ terraform {
 provider "google" {
   credentials = file(var.service_account_key_file)
   project     = var.project_id
-  region      = var.gcpregion # Replace with your desired region
+  region      = var.gcpregion 
 
 }
 
