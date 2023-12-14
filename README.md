@@ -71,7 +71,7 @@ After installing these dependencies, you should be able to run the Terraform com
   
 - Wait for Resources to Be Provisioned
 
-- Access Outputs (Optional) by running
+- Link to HTTP Endpoint will be printed in terminal or Access Outputs (Optional) by running
   
 ```terraform output```
 
