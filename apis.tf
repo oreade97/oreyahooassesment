@@ -11,7 +11,8 @@ locals {
     "monitoring.googleapis.com",
     "logging.googleapis.com",
     "cloudtrace.googleapis.com",
-    "cloudbuild.googleapis.com"
+    "cloudbuild.googleapis.com",
+    "cloudkms.googleapis.com"
   ])
 }
 

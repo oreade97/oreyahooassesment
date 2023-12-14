@@ -37,6 +37,15 @@ variable "bucket_location" {
 
 }
 
+variable "key_ring_name" {
+  description = "The CMEK key ring name"
+}
+
+variable "crypto_key_name" {
+  description = "The CMEK key name"
+}
+
+
 //OBJECT CREATION VARIABLES
 variable "pubsubtopicname" {
   description = "The pubsub topic name"

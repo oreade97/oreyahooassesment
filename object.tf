@@ -37,7 +37,41 @@ resource "google_project_iam_member" "service_account_role_binding" {
   member  = "serviceAccount:${google_service_account.bucket_creator.email}"
 }
 
+resource "google_project_iam_member" "kms_crypto_key_permission_cssa" {
+  project = var.project_id
+  role    = "roles/cloudkms.cryptoKeyEncrypter"
+  member  = "serviceAccount:${google_service_account.bucket_creator.email}"
+}
+
+//permissions for cloud storage service account to encrypt the bucket
+data "google_project" "project" {
+
+}
+
+
+resource "google_project_iam_member" "kms_crypto_key_permission" {
+  project = var.project_id
+  role    = "roles/cloudkms.cryptoKeyEncrypterDecrypter"
+  member  = "serviceAccount:service-${data.google_project.project.number}@gs-project-accounts.iam.gserviceaccount.com"
+}
+
+
+#create CMEK Key
+resource "google_kms_key_ring" "crypto_key_ring" {
+  name     = var.key_ring_name
+  location = var.gcpregion
+}
+
+resource "google_kms_crypto_key" "crypto_key" {
+  name       = var.crypto_key_name
+  key_ring   = google_kms_key_ring.crypto_key_ring.id
+  purpose    = "ENCRYPT_DECRYPT"
+  
+}
+
+
 resource "google_storage_bucket" "bucket" {
+  depends_on = [ google_kms_crypto_key.crypto_key ]
   name                        = var.bucket_name
   location                    = var.bucket_location
   uniform_bucket_level_access = true
@@ -50,6 +84,10 @@ resource "google_storage_bucket" "bucket" {
     }
   }
   force_destroy = true
+
+  encryption {
+    default_kms_key_name = google_kms_crypto_key.crypto_key.id
+}
 }
 
 //Limititing the SA to bucket creation only and nothing else
