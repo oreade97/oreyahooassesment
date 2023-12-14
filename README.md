@@ -1,6 +1,7 @@
 ### Yahoo Cloud Enablement Engineer Exercise 
 
 **Quick Description**
+
 These files deploy a set of resources on Google Cloud Platform to create, manage, and monitor cloud resources. The deployment includes the following components:
 1. Cloud Storage Bucket
 
@@ -48,26 +49,38 @@ Before running the provided Terraform configuration, ensure that you have the fo
     Google Cloud Functions Runtime Dependencies:
         Ensure that the Python 3.9 runtime is available on your system if you are using the Python 3.9 runtime for Cloud Functions.
 
-After installing these dependencies, you should be able to run the Terraform commands to deploy the infrastructure. Make sure to replace placeholder values in the "terraform.tfvars" file with your actual values. Please make sure the bucket names are unique or the terraform deployment will fail.
+After installing these dependencies, you should be able to run the Terraform commands to deploy the infrastructure. Make sure to replace placeholder values in the "terraform.tfvars" file with your actual values. **Please make sure the bucket names are unique or the terraform deployment will fail.**
 
 
 **Deploying the Cloud resources**
 
 - Clone the Repository by running 
-    git clone https://github.com/username/repository.git
+
+    ```git clone https://github.com/oreade97/repository.git```
+
 -Navigate to the Repository Directory:
+
     cd repository
+
 -Initialize Terraform and Run:
-    "terraform init"
-    "terraform plan"
-    "terraform apply"
+
+
+    terraform init
+
+    terraform plan
+    
+    terraform apply
+  
 - Wait for Resources to Be Provisioned
 
-- Access Outputs (Optional) by running "terraform output"
+- Access Outputs (Optional) by running
+  
+```terraform output```
 
 
 **TearDown Instructions**
-- Run "terraform destroy"
+- Run 
+```terraform destroy```
 
 
 
