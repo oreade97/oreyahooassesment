@@ -81,7 +81,7 @@ After installing these dependencies, you should be able to run the Terraform com
 ```terraform destroy```
 
 
-**To disable the cloud apis as well, after deleteing the cloud resources, remove the "disable_on_destroy = false" attribute and run terraform destroy again** We cannot currenlty control the order that cloud resources are destroyed in terraform, and the apis are needed to delete the resources.
+**To also disable the cloud apis; after deleteing the cloud resources, remove the "disable_on_destroy = false" attribute and run terraform destroy again** We cannot currenlty control the order that cloud resources are destroyed in terraform, and some of the apis are needed to delete the resources.
 
 The cloud scheduler runs every 10 minutes. It will take 10 minutes before the first object is created in the bucket.
 
